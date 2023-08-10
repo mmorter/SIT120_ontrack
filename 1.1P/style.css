@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#student {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+}
+
+#student td, #student th {
+    border: 2px solid #0a0a0a;
+    padding: 10px;
+    text-align: center;
+}
+
+#student th {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    background-color: cornflowerblue;
+}
+
+ /* unvisited link */
+ a:link {
+    color: blue;
+}
+
+/* visited link */
+a:visited {
+    color: pink;
+}
+
+/* link being hovered over */
+a:hover {
+    color: red;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
