@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task 1.2P</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            .left {
+                background-color: aqua;
+                float: left;
+                padding: 10px;
+                width: 50%;
+            }
+
+            .right {
+                background-color: darkorchid;
+                float: right;
+                padding: 10px;
+                width: 50%;
+            }
+
+            @media screen and (max-width:800px) {
+                .left, .right {
+                    width: 100%;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <h1 style="font-size:8vw">Testing responsive text</h1>
+        <br>
+        <p>Here is a responsive image</p>
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/74/Deakin_University_Logo_2017.svg" alt="Deakin logo" style="max-width:100%; height:auto;">
+
+
+        <div class="left"> 
+            <p>Left side</p>
+        </div>
+
+        <div class="right"> 
+            <p>Right side</p>
+        </div>
+
+    </body>
+
+</html>
