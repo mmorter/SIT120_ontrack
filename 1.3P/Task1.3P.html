@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task 1.3P</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/7/74/Deakin_University_Logo_2017.svg">
+    
+    </head>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    
+
+    <body>
+
+        <div id="intro">
+            <h1>{{ message }}</h1>
+        </div>
+        
+        <script>
+          var myObject = new Vue({
+            el: '#intro',
+            data: {message: 'Welcome to the portfolio of Matthew Morter'}
+          })
+        </script>
+
+
+        <div class="tab">
+            <button class="tablinks" onclick="changePage(event, 'aboutMe')" id="defaultOpen">About me</button>
+            <button class="tablinks" onclick="changePage(event, 'units')">Units completed</button>
+
+        </div>
+
+        <div id="aboutMe" class="tabcontent">
+            <h2>About me</h2>
+            <p>
+                My name is Matthew Morter, I am 25 years old and i am nearing the end of my studies. I am majoring in cyber security. 
+                I have always had an interest in computers and technology, the potential of what they could do fascinates me and I want to be a part of it. 
+                I also like that things are always changing and that there is always new things to learn and create which keeps the industry interesting. I have studied web development, cyber security, 
+                programming in a few languages, project management, ethical hacking and cryptography. 
+            </p>
+            <p> In the future I would like to persue a career in cyber security mainly focusing on testing and improving security systems</p>
+        </div>
+
+        <script setup>
+            import { ref } from 'vue'
+            const UnitLevel1 = ref([
+                "SIT101",
+                "SIT102",
+                "SIT103",
+                "SIT104",
+                "SIT105",
+                "SIT113",
+                "SIT172",
+                "SIT182",
+                "SIT192"
+            ])
+            const UnitLevel2 = ref([
+                "SIT202",
+                "SIT223",
+                "SIT232",
+                "SIT281",
+                "SIT281"
+            ])
+            const UnitLevel3 = ref([
+                "SIT321",
+                "SIT374",
+                "SIT378",
+                "SIT379",
+                "SIT382",
+                "SIT384"
+            ])
+        </script>
+
+        <div id="units" class="tabcontent">
+            <h2>Units I have completed</h2>
+            <table id="unitsCompleted">
+                <tr>
+                    <th>Unit Level 1</th>
+                    <th>Unit Level 2</th>
+                    <th>Unit Level 3</th>
+                </tr>
+                <tr>
+                    <td><ul><li v-for="item in UnitLevel1">{{item}}</li></ul></td>
+                    <td><ul><li v-for="item in UnitLevel2">{{item}}</li></ul></td>
+                    <td><ul><li v-for="item in UnitLevel3">{{item}}</li></ul></td>
+                </tr>
+        </div>
+        
+        <script setup>
+            import { ref } from 'vue'
+            const count = ref(0)
+        </script>
+
+        <template>
+            <button @click="count++">i was clicked {{count}} times</button>
+        </template>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+        <script>
+            function changePage(evt, overView) {
+                var i, tabcontent, tablinks;
+    
+                 tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                document.getElementById(overView).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+
+            document.getElementById("defaultOpen").click();
+        </script>
+
+    </body>
+
+</html>
